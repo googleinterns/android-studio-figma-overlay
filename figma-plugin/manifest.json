@@ -1,0 +1,7 @@
+{
+  "name": "Android Studio Overlay Provider",
+  "id": "854308182569747791",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "overlay-provider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@figma/plugin-typings": "^1.15.0",
+    "babel-jest": "^26.1.0",
+    "css-loader": "^3.6.0",
+    "html-webpack-inline-source-plugin": "1.0.0-beta.2",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.1.0",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.0",
+    "typescript": "^3.9.6",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "figma-api-stub": "0.0.42"
+  }
+}
