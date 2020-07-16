@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.21'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compileOnly fileTree(dir: studio_path_plugins, include:['*.jar'])
+    compileOnly fileTree(dir: studio_path_lib, include:['*.jar'])
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.mockito:mockito-core:2.22.0'
+    testCompile fileTree(dir: studio_path_plugins, include:['*.jar'])
+    testCompile fileTree(dir: studio_path_lib, include:['*.jar'])
+
+    testImplementation 'org.mockito:mockito-core:2.22.0'
+}
+
+intellij {
+    version '2019.2.4'
+    plugins 'android'
+    updateSinceUntilBuild false
+}
+
+runIde {
+    ideDirectory studio_path
+}
+
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
