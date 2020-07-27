@@ -37,3 +37,12 @@ export function cancelOverlay() {
     request.open('GET', API + "/cancel");
     request.send();
 }
+
+/**  This is a simple call to the local server 
+ *  which stops the server,triggered
+ * when the user manually closes the plugin */
+export function manualCancelOverlay() {
+    var request = new XMLHttpRequest();
+    request.open('GET', API + "/manual_cancel");
+    request.send();
+}
