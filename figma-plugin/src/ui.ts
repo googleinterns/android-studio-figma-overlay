@@ -15,7 +15,7 @@ document.getElementById('send').onclick = () => {
 }
 
 document.getElementById('cancel').onclick = () => {
-    Server.cancelOverlay();
+    Server.manualCancelOverlay();
     parent.postMessage({ pluginMessage: { type: CLOSE_PLUGIN_REQUEST } }, '*')
 }
 
@@ -26,9 +26,6 @@ window.onmessage = async (event) => {
             break;
         case SEND_OVERLAY_REQUEST:
             await Server.sendOverlay(event.data.pluginMessage);
-            break;
-        case CLOSE_PLUGIN_REQUEST:
-            Server.cancelOverlay();
             break;
         case INVALID_ID_ERR:
             setError("This overlay does not exist anymore.");
