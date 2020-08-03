@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>figma_overlays</id>
+    <name>Figma Overlays</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+    <idea-version since-build="192.*" until-build="201.*"/>
+
+
+    <extensions defaultExtensionNs="com.android.tools.idea.ui.designer">
+        <overlayProvider implementation="com.android.tools.figma_overlay_plugin.FigmaOverlayProvider"/>
+    </extensions>
+</idea-plugin>
