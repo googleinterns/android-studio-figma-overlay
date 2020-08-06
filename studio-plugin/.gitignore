@@ -2,7 +2,7 @@
 !.gitignore
 
 local.properties
+gradle.properties
 
 build/
 out/
-gradle.properties

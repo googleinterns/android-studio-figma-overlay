@@ -76,7 +76,8 @@ public class FigmaOverlayProvider implements OverlayProvider {
       }
       LocalServer server = new LocalServer(HttpServer.create(new InetSocketAddress(PORT), 0),
           promise,
-          overlayId, SERVER_TIMEOUT_MILLIS);
+          overlayId,
+          SERVER_TIMEOUT_MILLIS);
       server.startServer();
       myServer = server;
     } catch (Exception e) {
