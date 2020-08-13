@@ -17,7 +17,7 @@
 <idea-plugin>
     <id>figma_overlays</id>
     <name>Figma Overlays</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <vendor>Google</vendor>
 
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.androidstudio</depends>
