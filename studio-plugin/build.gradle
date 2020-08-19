@@ -12,6 +12,10 @@ repositories {
     jcenter()
 }
 
+if (!hasProperty('StudioCompilePath')) {
+    throw new GradleException("No StudioCompilePath value was set, please create gradle.properties file")
+}
+
 dependencies {
     compileOnly fileTree(dir: "$StudioCompilePath/plugins/android/lib", include:['*.jar'])
     compileOnly fileTree(dir: "$StudioCompilePath/lib", include:['*.jar'])

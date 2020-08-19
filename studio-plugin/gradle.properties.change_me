@@ -1,5 +1,5 @@
 # Copy this file as gradle.properties
-# It will be used for both compiling and running the adb-idea plugin.
+# It will be used for both compiling and running the Figma overlays plugin.
 
 
 # Path to a downloaded instance of Android Studio
