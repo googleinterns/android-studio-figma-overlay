@@ -24,7 +24,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import com.android.tools.idea.ui.designer.OverlayData;
+import com.android.tools.idea.ui.designer.overlays.OverlayData;
 import com.google.gson.Gson;
 import com.intellij.util.concurrency.AppExecutorUtil;
 import com.sun.net.httpserver.HttpServer;

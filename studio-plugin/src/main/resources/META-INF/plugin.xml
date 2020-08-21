@@ -25,7 +25,7 @@
     <idea-version since-build="192.*" until-build="201.*"/>
 
 
-    <extensions defaultExtensionNs="com.android.tools.idea.ui.designer">
+    <extensions defaultExtensionNs="com.android.tools.idea.ui.designer.overlays">
         <overlayProvider implementation="com.android.tools.figma_overlay_plugin.FigmaOverlayProvider"/>
     </extensions>
 </idea-plugin>

@@ -14,8 +14,8 @@
 
 package com.android.tools.figma_overlay_plugin;
 
-import com.android.tools.idea.ui.designer.OverlayData;
-import com.android.tools.idea.ui.designer.OverlayProvider;
+import com.android.tools.idea.ui.designer.overlays.OverlayData;
+import com.android.tools.idea.ui.designer.overlays.OverlayProvider;
 import com.intellij.openapi.project.Project;
 import com.sun.net.httpserver.HttpServer;
 import java.awt.Desktop;

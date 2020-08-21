@@ -16,10 +16,10 @@ package com.android.tools.figma_overlay_plugin;
 
 import static org.apache.http.HttpStatus.SC_OK;
 
-import com.android.tools.idea.ui.designer.Overlay;
-import com.android.tools.idea.ui.designer.OverlayData;
-import com.android.tools.idea.ui.designer.OverlayNotFoundException;
-import com.android.tools.idea.ui.designer.OverlayProvider;
+import com.android.tools.idea.ui.designer.overlays.OverlayEntry;
+import com.android.tools.idea.ui.designer.overlays.OverlayData;
+import com.android.tools.idea.ui.designer.overlays.OverlayNotFoundException;
+import com.android.tools.idea.ui.designer.overlays.OverlayProvider;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.gson.Gson;
 import com.intellij.util.concurrency.AppExecutorUtil;
@@ -228,8 +228,8 @@ class LocalServer {
       byte[] decodedBytes = Base64.getDecoder().decode(overlay);
       ByteArrayInputStream overlayStream = new ByteArrayInputStream(decodedBytes);
       BufferedImage overlayImage = ImageIO.read(overlayStream);
-      Overlay overlay = new Overlay(id, null);
-      return new OverlayData(overlay, name, overlayImage);
+      OverlayEntry overlayEntry = new OverlayEntry(id, null);
+      return new OverlayData(overlayEntry, name, overlayImage);
     }
   }
 }
