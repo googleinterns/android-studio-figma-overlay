@@ -16,7 +16,6 @@ package com.android.tools.figma_overlay_plugin;
 
 import com.android.tools.idea.ui.designer.overlays.OverlayData;
 import com.android.tools.idea.ui.designer.overlays.OverlayProvider;
-import com.intellij.openapi.project.Project;
 import com.sun.net.httpserver.HttpServer;
 import java.awt.Desktop;
 import java.awt.Image;
@@ -55,14 +54,14 @@ public class FigmaOverlayProvider implements OverlayProvider {
   }
 
   @Override
-  public Promise<OverlayData> addOverlay(Project project) {
+  public Promise<OverlayData> addOverlay() {
     AsyncPromise<OverlayData> promise = new AsyncPromise<>();
     addFromFigma(EMPTY_ID, promise);
     return promise;
   }
 
   @Override
-  public Promise<OverlayData> getOverlay(String overlayId, Project project) {
+  public Promise<OverlayData> getOverlay(String overlayId) {
     AsyncPromise<OverlayData> promise = new AsyncPromise<>();
     addFromFigma(overlayId, promise);
     return promise;

@@ -22,7 +22,7 @@
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.androidstudio</depends>
 
-    <idea-version since-build="192.*" until-build="201.*"/>
+    <idea-version since-build="192.*" until-build="202.*"/>
 
 
     <extensions defaultExtensionNs="com.android.tools.idea.ui.designer.overlays">
