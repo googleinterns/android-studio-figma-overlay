@@ -29,7 +29,7 @@ dependencies {
 }
 
 intellij {
-    version '2019.2.4'
+    version '202.7660.26'
     plugins 'android'
     updateSinceUntilBuild false
 }
@@ -40,6 +40,5 @@ runIde {
 
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      Initial verions."""
 }

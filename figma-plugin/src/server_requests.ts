@@ -20,15 +20,24 @@ import { API, RETURN_OVERLAY_REQUEST, ExportOverlayRequest, setError, makePostDa
  * ID and display name. 
 */
 export async function sendOverlay(msg: ExportOverlayRequest) {
-    const data: string = makePostData(msg);
-    console.log("sending ", data)
-
-    var request = new XMLHttpRequest()
-    request.open('POST', API + "/result")
-    request.onerror = () => {
-        setError("Connection timed out. Please request the overlay again.")
-    }
-    request.send(data)
+    return new Promise<string>((resolve, reject) => {
+        const data: string = makePostData(msg);
+        var request = new XMLHttpRequest()
+        request.open('POST', API + "/result")
+        request.onerror = () => {
+            setError("Connection timed out. Please request the overlay again.")
+        }
+        request.onreadystatechange = function (event) {
+            if (request.readyState >= XMLHttpRequest.HEADERS_RECEIVED){
+                if (request.status >= 200 && request.status < 300) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            }
+         };
+        request.send(data)
+    });
 }
 
 /** Method that requests the overlay ID to be fetched 

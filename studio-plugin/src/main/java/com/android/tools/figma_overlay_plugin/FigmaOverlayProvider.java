@@ -24,6 +24,7 @@ import java.net.InetSocketAddress;
 import java.net.URI;
 import javax.swing.ImageIcon;
 import org.apache.commons.lang.SystemUtils;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.concurrency.AsyncPromise;
 import org.jetbrains.concurrency.Promise;
 
@@ -36,6 +37,7 @@ public class FigmaOverlayProvider implements OverlayProvider {
   private static final int SERVER_TIMEOUT_MILLIS = 120000;
   private LocalServer myServer;
 
+  @NotNull
   @Override
   public String getPluginName() {
     return "Figma";
@@ -53,6 +55,7 @@ public class FigmaOverlayProvider implements OverlayProvider {
     }
   }
 
+  @NotNull
   @Override
   public Promise<OverlayData> addOverlay() {
     AsyncPromise<OverlayData> promise = new AsyncPromise<>();
@@ -60,8 +63,9 @@ public class FigmaOverlayProvider implements OverlayProvider {
     return promise;
   }
 
+  @NotNull
   @Override
-  public Promise<OverlayData> getOverlay(String overlayId) {
+  public Promise<OverlayData> getOverlay(@NotNull String overlayId) {
     AsyncPromise<OverlayData> promise = new AsyncPromise<>();
     addFromFigma(overlayId, promise);
     return promise;

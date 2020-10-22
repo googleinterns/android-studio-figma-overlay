@@ -17,12 +17,24 @@
 <idea-plugin>
     <id>figma_overlays</id>
     <name>Figma Overlays</name>
-    <vendor>Google</vendor>
+    <vendor url="https://github.com/googleinterns/android-studio-figma-overlay">Google</vendor>
+    <category>Android</category>
+    <description> <![CDATA[
+                <p>This plugin allows displaying a Figma drawing on top of a design layout preview in Android Studio.
+                Note that you need to have the Figma plugin counterpart installed too.</p>
+                <p>The Android Studio plugin uses a new extension point (introduced in Android Studio 4.2) to provide
+                an overlay image. The overlay images is sent over from the Figma plugin.</p>
+                <p>After installing both the Android Studio plugin and the Figma plugin, you will see a new menu for
+                overlays in a layout preview window. You can use that menu to interact with overlays from different
+                overlay providers (in the case of this plugin, Figma overlays).</p>
+                See <a href="https://github.com/googleinterns/android-studio-figma-overlay">https://github.com/googleinterns/android-studio-figma-overlay</a>
+    ]]>
+    </description>
 
-    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.android</depends>
     <depends>com.intellij.modules.androidstudio</depends>
 
-    <idea-version since-build="192.*" until-build="202.*"/>
+    <idea-version since-build="202.7660.26"/>
 
 
     <extensions defaultExtensionNs="com.android.tools.idea.ui.designer.overlays">
